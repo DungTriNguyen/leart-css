@@ -52,5 +52,3 @@ export default tseslint.config({
   },
 });
 ```
-
-> > > > > > > 144a608 (push code learn-css 17/03)
