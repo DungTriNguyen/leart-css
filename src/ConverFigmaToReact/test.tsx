@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const DonationPage = () => {
-  const [donationAmount, setDonationAmount] = useState(0);
+  const [donationAmount, setDonationAmount] = useState("");
   const [isAnonymous, setIsAnonymous] = useState(false);
 
   return (
