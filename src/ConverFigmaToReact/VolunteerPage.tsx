@@ -2,8 +2,8 @@ import React from "react";
 
 const VolunteerPage = () => {
   return (
-    <div className="w-full min-h-screen bg-white overflow-x-hidden font-['Inter']">
-      {/* Header */}
+    <div className="w-full  bg-white overflow-x-hidden font-['Inter']">
+      {/* Header hahahaha */}
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-10">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between flex-wrap">
           <div className="flex items-center space-x-4">
@@ -23,15 +23,6 @@ const VolunteerPage = () => {
             </a>
             <a href="#" className="hover:text-sky-500">
               Chương trình
-            </a>
-            <a href="#" className="hover:text-sky-500">
-              Về chúng tôi
-            </a>
-            <a href="#" className="hover:text-sky-500">
-              Liên hệ
-            </a>
-            <a href="#" className="hover:text-sky-500">
-              Cơ hội trở thành CTV
             </a>
           </nav>
 
