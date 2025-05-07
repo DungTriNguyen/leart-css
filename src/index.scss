@@ -1,0 +1,293 @@
+// Variables
+$mobile: 550px;
+$smallTablet: 768px;
+$mediumTablet: 992px;
+$tablet: 1100px;
+$desktop: 1440px;
+
+$primary-color: #08445e;
+$text-color: #52525b;
+$bg-light: #f9fafb;
+
+// Mixins (already provided in the question, included here for completeness)
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexJustifyAlign($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin space-x($space) {
+  & > :not([hidden]) ~ :not([hidden]) {
+    margin-left: $space;
+  }
+}
+@mixin space-y($space) {
+  & > :not([hidden]) ~ :not([hidden]) {
+    margin-top: $space;
+  }
+}
+@mixin mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin tabletAndBelow {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: ($desktop + 1)) {
+    @content;
+  }
+}
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lao Sans Pro", sans-serif;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1260px;
+  width: 100%;
+  padding: 0 90px;
+  @include mx-auto;
+
+  @include tabletAndBelow {
+    padding: 0 40px;
+  }
+  @include mobile {
+    padding: 0 20px;
+  }
+}
+
+// Header
+.header {
+  position: fixed;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 1rem 0;
+  z-index: 1000;
+
+  &__inner {
+    @include flexJustifyAlign(space-between, center);
+  }
+
+  .logo img {
+    width: 125px;
+  }
+
+  .nav {
+    @include flexJustifyAlign(flex-start, center);
+    @include space-x(32px);
+
+    @include tabletAndBelow {
+      display: none;
+    }
+  }
+
+  .nav__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .auth {
+    @include flexJustifyAlign(flex-start, center);
+    @include space-x(32px);
+  }
+
+  .auth__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+}
+
+// Buttons
+.btn {
+  padding: 10px 22px;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-size: 16px;
+
+  &--primary {
+    background: #fff;
+    color: #000;
+  }
+
+  &--outline {
+    border: 1px solid #000;
+    color: #000;
+    padding-bottom: 17px;
+  }
+}
+
+// Sections
+.section {
+  padding: 64px 0;
+
+  &.hero {
+    background: $bg-light;
+  }
+
+  h1,
+  h2 {
+    font-size: 48px;
+    line-height: 56px;
+    color: #000;
+    margin-bottom: 8px;
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  .section__subtitle {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $primary-color;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 18px;
+    max-width: 420px;
+  }
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 64px;
+
+  @include tabletAndBelow {
+    grid-template-columns: 1fr;
+  }
+
+  .feature {
+    h3 {
+      font-size: 19.84px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    &__link {
+      color: $text-color;
+      text-decoration: underline;
+      font-size: 15.88px;
+    }
+  }
+}
+
+.sales-channels {
+  .section__header {
+    max-width: 630px;
+    margin-bottom: 64px;
+  }
+
+  .images {
+    @include flexJustifyAlign(space-between, center);
+    @include tabletAndBelow {
+      flex-direction: column;
+      @include space-y(20px);
+    }
+  }
+}
+
+.checkout,
+.pos {
+  .container {
+    @include flexJustifyAlign(space-between, flex-start);
+    @include tabletAndBelow {
+      flex-direction: column;
+    }
+  }
+
+  img {
+    max-width: 618px;
+    @include tabletAndBelow {
+      margin-top: 32px;
+    }
+  }
+
+  .text {
+    max-width: 420px;
+  }
+}
+
+.pos {
+  .pos__content {
+    flex-direction: row-reverse;
+    @include tabletAndBelow {
+      flex-direction: column;
+    }
+  }
+}
+
+// Footer
+.footer {
+  padding: 80px 0;
+  background: #fff;
+
+  &__inner {
+    @include flexJustifyAlign(space-between, flex-start);
+    @include tabletAndBelow {
+      flex-direction: column;
+      @include space-y(40px);
+    }
+  }
+
+  &__logo img {
+    width: 38px;
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+
+    @include tabletAndBelow {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__column {
+    h4 {
+      font-size: 16px;
+      color: #000;
+      margin-bottom: 24px;
+    }
+
+    a {
+      display: block;
+      color: #18181b;
+      text-decoration: none;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+  }
+}
