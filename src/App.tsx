@@ -68,7 +68,7 @@ function App() {
       <HeroCta />
       <Footer />
       <FooterFinal /> */}
-      <Home />
+      {/* <Home /> */}
     </>
   );
 }
