@@ -6,7 +6,6 @@ const DonationPage = () => {
 
   return (
     <div className="w-full bg-white font-sans">
-      {/* Header/Navigation */}
       <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
         <div className="container mx-auto px-4 py-2 flex flex-wrap items-center justify-between">
           <div className="flex items-center">
@@ -45,7 +44,7 @@ const DonationPage = () => {
             <a href="#" className="hover:text-sky-500">
               Về chúng tôi
             </a>
-            <a href="#" className="hover:text-sky-500">
+            <a href="/lienhe" className="hover:text-sky-500">
               Liên hệ
             </a>
             <a href="#" className="hover:text-sky-500">
