@@ -22,7 +22,7 @@ import PointOfSaleSection from "./ConverFigmaToReact/ComponentSection6/PointOfSa
 import MarketingTools from "./ConverFigmaToReact/ComponentSection7/MarketingTools";
 import BusinessOperations from "./ConverFigmaToReact/ComponentSection8/BusinessOperation";
 import MarqueeTrialBanner from "./ConverFigmaToReact/ComponentSection10/MarqueeTrialBanner";
-import EnhancedInputDesign from "./ConverFigmaToReact/ComponentSection11/EnhancedInputDesign";
+import EnhancedInputDesign from "./ConverFigmaToReact/ComponentSection11/MerchantShowcase";
 import MerchantShowcase from "./ConverFigmaToReact/ComponentSection11/MerchantShowcase";
 import VideoOverlay from "./ConverFigmaToReact/ComponentSection12/VideoOverlay";
 import TestimonialSection from "./ConverFigmaToReact/ComponentSection13/TestimonialSection";
