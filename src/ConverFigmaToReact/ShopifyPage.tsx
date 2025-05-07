@@ -3,15 +3,12 @@ import React from "react";
 const ShopifyPage = () => {
   return (
     <div className="w-full min-h-screen bg-white font-['Lao_Sans_Pro'] overflow-x-hidden">
-      {/* Skip to Content */}
       <a
         href="#main-content"
-        className="fixed top-4 left-4 z-50 bg-white text-black text-sm px-6 py-4 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-500"
+        className="fixed top-4 left-4 z-50 40-3434 bg-white text-black text-sm px-6 py-4 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-500"
       >
         Skip to Content
       </a>
-
-      {/* Header */}
       <header className="fixed top-0 left-0 w-full bg-black bg-opacity-50 text-white z-10">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between flex-wrap">
           <div className="flex items-center">
@@ -48,9 +45,7 @@ const ShopifyPage = () => {
         </div>
       </header>
 
-      {/* Main Content */}
       <main id="main-content" className="pt-16">
-        {/* Hero Section */}
         <section className="relative bg-black bg-opacity-50 text-white min-h-[729px] flex items-center">
           <img
             src="https://placehold.co/1440x759"

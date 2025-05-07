@@ -4,7 +4,7 @@ const VolunteerPage = () => {
   return (
     <div className="w-full min-h-screen bg-white overflow-x-hidden font-['Inter']">
       {/* Header */}
-      <header className="fixed top-0 left-0 w-full bg-white shadow-md z-10">
+      <header className="fixed flex left-0 w-full bg-white shadow-md z-10">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between flex-wrap">
           <div className="flex items-center space-x-4">
             <img
@@ -21,16 +21,16 @@ const VolunteerPage = () => {
             <a href="#" className="hover:text-sky-500">
               Trang chủ
             </a>
-            <a href="#" className="hover:text-sky-500">
+            <a href="#" className="hover:text-sky-400">
               Chương trình
             </a>
-            <a href="#" className="hover:text-sky-500">
+            <a href="#" className="hover:text-sky-400">
               Về chúng tôi
             </a>
-            <a href="#" className="hover:text-sky-500">
+            <a href="#" className="hover:text-sky-400">
               Liên hệ
             </a>
-            <a href="#" className="hover:text-sky-500">
+            <a href="#" className="hover:text-sky-400">
               Cơ hội trở thành CTV
             </a>
           </nav>
