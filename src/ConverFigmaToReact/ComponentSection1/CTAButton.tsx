@@ -15,7 +15,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
     <button
       onClick={onClick}
       className={`
-        px-7 py-3.5 text-lg tracking-normal leading-7 rounded-full cursor-pointer
+        px-7 py-3.5 text-lg flex tracking-normal leading-7 rounded-full cursor-pointer
         ${
           primary
             ? "bg-white text-black"
